@@ -14,18 +14,18 @@ const Header = ({ onSearch, onSort }) => {
 
   return (
     <header className="bg-violet-700 text-white p-4 shadow-lg">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         {/* Title Section */}
         <div className="text-center md:text-left">
           <h1 className="text-3xl font-bold">Car Brand Stats</h1>
         </div>
 
         {/* Search and Sort Section */}
-        <div className="flex space-x-4 items-center mt- md:mt-0">
+        <div className="flex flex-col md:flex-row space-y-4 md:space-x-4 items-center mt-4 md:mt-0">
           {/* Search Bar */}
           <input
             type="text"
-            className="p-2 rounded-md bg-white-800 text-black focus:outline-none focus:ring-2 focus:ring-violet-500"
+            className="p-2 rounded-md bg-white text-black focus:outline-none focus:ring-2 focus:ring-violet-500 w-full sm:w-auto"
             value={searchTerm}
             onChange={handleSearch}
             placeholder="Search by Car Brand"
@@ -34,7 +34,7 @@ const Header = ({ onSearch, onSort }) => {
           {/* Sorting Dropdown */}
           <select
             onChange={handleSortChange}
-            className="p-2 rounded-md bg-white-800 text-black focus:outline-none focus:ring-2 focus:ring-violet-500"
+            className="p-2 rounded-md bg-white text-black focus:outline-none focus:ring-2 focus:ring-violet-500 w-full sm:w-auto"
           >
             <option value="sales">Sort by Sales</option>
             <option value="profit">Sort by Profit</option>
